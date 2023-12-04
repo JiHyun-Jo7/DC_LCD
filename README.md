@@ -12,6 +12,7 @@
 ### Port Setting
 ![Setup](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/5868322a-918e-4195-9929-24e68d4239bd)
 ---
+### Code
 
 <details>
 	<summary>Start</summary>
