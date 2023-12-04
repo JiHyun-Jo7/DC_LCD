@@ -91,7 +91,7 @@ LCD에 적혀있던 텍스트는 지워지고 현재 단계가 출력된다
 
 ![03_speed2_to_speed3](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/a1772341-79f4-4863-ba0e-6fcc2aaccb59)
 
-``
+```
 if(!(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12)))		// Button C12 - LED A7 ON
 	  {
 		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
@@ -108,7 +108,7 @@ if(!(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12)))		// Button C12 - LED A7 ON
 		  lcd_put_cur(0,0);
 		  lcd_send_string("Speed Level : 3");
 	  }
-``
+```
 
 - 
 - 강풍으로 설정한 버튼 C12를 누르면 모터가 세기 900으로 돌기 시작한다  
@@ -123,7 +123,7 @@ LED와 LCD의 변화는 1->2 에서 설명한 것과 동일하다
 
 ![04_speed3_to_stop](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/becc25b6-3083-4838-b45d-60f2f51a6ab6)
 
-``
+```
 if(!(flag1==0&&flag2==0&&flag3==0))
 		  // if = True (1), 1 -> ! -> 0, if doesn't work
 		  // if = false (0), 0 -> ! -> 1, if work
@@ -158,7 +158,7 @@ if(!(flag1==0&&flag2==0&&flag3==0))
 		  }
 	  }
 
-``
+```
 - 
 - 
    </div>
