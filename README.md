@@ -38,7 +38,7 @@
 
 		  TIM3->CCR1 = 500;		// motor speed 1
 
-		  lcd_init();
+		  lcd_init();			// LCD Initialization
 		  HAL_Delay(100);
 		  lcd_put_cur(0,0);
 		  lcd_send_string("Speed Level : 1");
@@ -46,9 +46,11 @@
 	  }
 
 ```
-- 
+- Press button D1 (level 1) to rotate the motor to intensity 500  
+LED A5 connected to the button will turn on  
+The LCD clears the previously displayed message and displays the current level
 - 약풍으로 설정한 버튼 C10을 누르면 모터가 500의 강도로 돌기 시작한다  
-버튼과 연결된 LED에 불이 켜지고, LCD에는 바람의 단계가 표시된다
+버튼과 연결된 LED A5에 불이 켜지고, LCD에 적혀있던 텍스트는 지워지고 현재 단계가 출력된다
 
    </div>
 </details>
@@ -71,15 +73,17 @@
 
 		  TIM3->CCR1=750;		// motor speed 2
 
-		  lcd_init();
+		  lcd_init();			// LCD Initialization
 		  HAL_Delay(100);
 		  lcd_put_cur(0,0);
 		  lcd_send_string("Speed Level : 2");
 	  }
 ```
--
+- Press button C11 (level 2) to rotate the motor to an intensity of 750  
+LED A5 connected to button C10 turns off and LED A6 connected to button C11 turns on  
+The previously displayed message on the LCD is erased and a new message is displayed
 - 중풍으로 설정한 버튼 C11을 누르면 모터가 750 세기로 돌기 시작한다  
-버튼 10과 연결된 LED가 꺼지고 버튼 11과 연결된 LED가 켜진다  
+버튼 C10과 연결된 LED A5가 꺼지고 버튼C11과 연결된 LED A6가 켜진다  
 LCD에 적혀있던 텍스트는 지워지고 현재 단계가 출력된다
 
    </div>
@@ -110,9 +114,10 @@ if(!(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12)))		// Button C12 - LED A7 ON
 	  }
 ```
 
-- 
+- Press button C12 (level 3) to rotate the motor to intensity 900  
+The LCD and LED(A7) changes are the same as in 1->2
 - 강풍으로 설정한 버튼 C12를 누르면 모터가 세기 900으로 돌기 시작한다  
-LED와 LCD의 변화는 1->2 에서 설명한 것과 동일하다
+LED(A7)와 LCD의 변화는 1->2 에서 설명한 것과 동일하다
 
    </div>
 </details>
@@ -125,10 +130,8 @@ LED와 LCD의 변화는 1->2 에서 설명한 것과 동일하다
 
 ```
 if(!(flag1==0&&flag2==0&&flag3==0))
-		  // if = True (1), 1 -> ! -> 0, if doesn't work
-		  // if = false (0), 0 -> ! -> 1, if work
 	  {
-		  if(!(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)))		// Button D2 - LED B6 ON (3 time)
+		  if(!(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_2)))		// Button D2 - LED B6 ON (3 times)
 		  {
 			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
 			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 0);
@@ -159,7 +162,13 @@ if(!(flag1==0&&flag2==0&&flag3==0))
 	  }
 
 ```
-- 
-- 
+- Pressing button D2 (set to stop) stops the motor and turns off all LEDs connected to buttons C10, 11, and 12  
+LED B6 (connected to button D2) flashes three times and then turns off  
+The LCD displays an exit message and disappears after 1 second
+- The stop button only works when the fan is running
+- 종료로 설정한 버튼 D2을 누르면 모터가 멈추고 버튼 C10, 11, 12와 연결된 LED가 꺼진다  
+버튼 D2와 연결된 LED가 3회 깜빡인 후 꺼지며,
+LCD 에 종료 메세지가 표시된 후 1초 후 사라진다
+- 선풍기가 작동 중일때만 종료버튼은 작동한다
    </div>
 </details>
