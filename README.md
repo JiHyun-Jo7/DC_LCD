@@ -1,4 +1,4 @@
-# Simple Airfan (간단한 선풍기)
+# Simple Airfan (간단한 선풍기) 
 ---
 ### 개발 환경 (IDE)
 - Tool : STM32CubeIDE 1.13.1
@@ -12,7 +12,7 @@
 ### Port Setting
 ![Setup](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/5868322a-918e-4195-9929-24e68d4239bd)
 ---
-### Code
+### Code Review
 
 <details>
 	<summary>Start</summary>
@@ -178,3 +178,5 @@ LCD 에 종료 메세지가 표시된 후 1초 후 사라진다
 - 선풍기가 작동 중일때만 종료버튼은 작동한다
    </div>
 </details>
+
+---
