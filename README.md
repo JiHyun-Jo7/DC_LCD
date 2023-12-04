@@ -29,7 +29,7 @@
   lcd_send_string("Press the Button");
 ```
 
-- 
+- When turned on, output a message and wait until the button is pressed
 - 전원이 들어오면 버튼을 누르기 전까지 메세지가 출력된 상태로 대기한다
 
 ```
