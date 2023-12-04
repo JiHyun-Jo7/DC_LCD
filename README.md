@@ -3,6 +3,11 @@
 ### 개발 환경 (IDE)
 - Tool : STM32CubeIDE 1.13.1
 - Board : STM32F411RET
+- LCD : HITACHI 44780
+- DC MOTOR : 
+---
+### Circuit
+
 ---
 ### Port Setting
 ![Setup](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/5868322a-918e-4195-9929-24e68d4239bd)
