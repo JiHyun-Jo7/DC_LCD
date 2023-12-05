@@ -6,11 +6,11 @@
 - LCD : HITACHI 44780
 - DC MOTOR : 
 ---
-### Circuit
-![circuit](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/be01983e-9d9e-418e-867b-99d770ef6a6b)
----
 ### Port Setting
 ![Setup](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/5868322a-918e-4195-9929-24e68d4239bd)
+---
+### Circuit
+![circuit](https://github.com/JiHyun-Jo7/DC_LCD/assets/141097551/be01983e-9d9e-418e-867b-99d770ef6a6b)
 ---
 ### Code Review
 
