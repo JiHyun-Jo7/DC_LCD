@@ -2,7 +2,7 @@
 ---
 ### 개발 환경 (IDE)
 - Tool : STM32CubeIDE 1.13.1
-- Board : STM32F411RET
+- Board : STM32F411RE
 - LCD : HITACHI 44780
 - DC MOTOR : 
 ---
